@@ -1,0 +1,23 @@
+{
+  "name": "carry-it-forward-slacker-hackers-2019",
+  "version": "1.0.0",
+  "description": "Made for \"Hack for a Cause\" 2019",
+  "main": "index.js",
+  "dependencies": {
+    "qrcode": "^1.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hack4Eugene/carry-it-forward-slacker-hackers-2019.git"
+  },
+  "author": "",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/Hack4Eugene/carry-it-forward-slacker-hackers-2019/issues"
+  },
+  "homepage": "https://github.com/Hack4Eugene/carry-it-forward-slacker-hackers-2019#readme"
+}

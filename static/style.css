@@ -1,0 +1,141 @@
+/* Body */
+body {
+  height: 100%;
+  font-family: 'EB Garamond', serif;
+  font-size: calc(10px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.25em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+  margin: 5em 2em;
+  background-color: rgb(251, 251, 251);
+}
+
+.main-header {
+  text-align: center;
+}
+
+/* Navigation */
+.navbar.scrolled {
+  background-color: #fff !important;
+  transition: background-color 10ms linear;
+}
+
+.navbar.scrolled .nav-link {
+  color:#555;
+}
+
+.nav-link :active {
+  color: #b73e45;
+}
+
+#mainNavLink {
+  margin: 1.25em;
+}
+
+/* Headers */
+h1 {
+  font-family: 'Proxima Nova';
+  font-weight: bolder;
+  text-align: center;
+  font-size: calc(16px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.25em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+  color: #b73e45;
+}
+
+h2 {
+  font-family: 'Proxima Nova';
+  font-weight: bolder;
+  font-size: calc(12px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  line-height: calc(1.25em + (1.5 - 1.2) * ((100vw - 300px)/(1600 - 300)));
+  color: #b73e45;
+}
+
+.card-body {
+  border: 0.5px darkgrey;
+}
+
+#empty-card-title {
+  margin-top: 5em;
+  margin-left: 1em;
+}
+
+.section-card {
+  width: 100%;
+  max-width: 250px;
+  margin: 0 auto 100px;
+}
+
+.empty-card {
+  border: 0.5px #b73e45 !important;
+}
+
+/* Footer */
+.bottom {
+  font-size: 0.75em;
+}
+
+.bottom a {
+  color: black;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 0.5em !important;
+}
+
+/* Buttons */
+.btn { 
+  margin-top: 1em;
+  background-color: #b73e45;
+  border: none;
+}
+
+a.btn:hover {
+  background-color: black !important;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 20vw;
+  object-fit: cover;
+}
+
+.read-button {
+  float: right;
+}
+
+/* Media Queries for Button Sizing and to Remove Images on Mobile */
+@media (max-width: 575px) {
+
+}
+
+@media (max-width: 1080px) {
+.btn {
+  padding: 2px 4px;
+  font-size: 80%;
+  line-height: 1;
+  border-radius:3px;
+}
+
+textarea {
+  font-size: 80%;
+}
+
+.card-deck {
+  column-count: 3;
+}
+}
+
+@media (min-width: 769px) and (max-width: 1800px) {
+.btn {
+  padding:4px 9px;
+  font-size:90%;
+  line-height: 1.2;
+}
+textarea {
+  font-size: 80%;
+}
+
+.img {
+  display: none;
+}
+
+}

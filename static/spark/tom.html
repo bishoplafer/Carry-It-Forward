@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata and Stylesheets -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Carry It Forward">
+  <meta name="author" content="Kathleen Weisensel">
+  <meta name="x-donation-item-name" content="Carry it forward for Tom">
+
+  <title>Spark</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<!-- Body  -->
+
+<body>
+  <div class="container-fluid">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light navbar-expand-md justify-content-center fixed-top">
+      <a href="https://www.carryitforward.net" class="navbar d-flex mr-auto"><img class="img-fluid" width="200" height="200" src="../branding/CIF_Spark.png" alt="Carry It Forward logo"></a>
+
+      <!--Toggler button-->
+      <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#navbaritems" data-label-expanded="Close" aria-expanded="false" aria-label="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="sr-only">Toggle</span>
+      </button>
+
+      <!-- Site links -->
+      <div class="navbar-collapse collapse justify-content-between align-items-center w-100 position-relative" id="navbaritems">
+        <ul class="navbar-nav mx-auto text-center">
+          <li><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a></li>
+          <li class="nav-item" id="mainNavLink"><a class="nav-link" href="https://www.carryitforward.net">Home</a></li>
+          <li class="nav-item" id="mainNavLink"><a class="nav-link" href="https://www.carryitforward.net">About</a></li>
+          <li class="nav-item" id="mainNavLink"><a class="nav-link" href="https://www.carryitforward.net">Spark</a> </li>
+          <li class="nav-item" id="mainNavLink"><a class="nav-link" href="https://www.carryitforward.net">Projects</a></li>
+          <li class="nav-item" id="mainNavLink"><a class="nav-link" href="https://www.carryitforward.net">Contact</a></li>
+          <li class="nav-item" id="mainNavLink"><a class="nav-link" href="https://www.carryitforward.net">Take Action</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+
+    <div class="row" style="padding-top: 2em;">
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <img src="../images/tom.png" height="300" width="300" alt="Image of Tom">
+      </div>
+      
+      <div class="col-md-1"></div>
+      <div class="col-md-6">
+          <p>My name is Tom and this is my story.</p>
+          <p>I’m just a regular guy, originally from Missouri but I’ve moved all around. I’ve been homeless off/on for about 6 years. I’ve worked on farms and in construction. I like to work on motorcycles but I had to sell my bike to survive last year. I have a back injury and COPD, which make it hard to work these days. I believe God has a plan, I’m just doing my best to get right.</p>
+          <p>I would really be grateful if I could get a few things:<p>
+            <ul>
+              <li>Cold weather sleeping bag</li>
+              <li>Large back pack</li>
+              <li>Boot socks</li>
+            </ul>
+            <p>
+              My sleeping bag is too light and I am cold most of the time.  My backpack got stolen a month ago and I’ve been carrying things in small bags. A new backpack would be a great help.  In this weather, my feet are always wet and cold. Some good boot socks would save my feet. I’m grateful for any help. Thank you.
+            </p>
+
+            <h2>Donate <a id="donate-funds-link" href="https://www.carryitforward.net">funds for Tom.</a></h2>
+
+            <h2>Donate <a href="https://www.amazon.com/hz/wishlist/ls/2XZAJJRRNC82E?&sort=default&pldnSite=1">items from Tom's wish list.</a></h2>
+
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-3"></div>
+              <div class="col-md-1"></div>
+              <div class="col-md-6" id="qr-container">
+                  <canvas id='qr-canvas'></canvas>
+                </div>
+      </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="page-footer">
+
+      <!-- Footer Links -->
+      <div class="container bottom">
+        <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+          <div class="col-md-2 mb-3">
+            <h6>
+              <a id="donate-funds-link" href="https://www.carryitforward.net/terms-of-use">Donate Funds</a>
+            </h6>
+          </div>
+
+          <div class="col-md-2 mb-3">
+            <h6>
+              <a href="https://www.carryitforward.net/privacy-policy">Donate Goods</a>
+            </h6>
+          </div>
+
+          <div class="col-md-2 mb-3">
+            <h6>
+              <a href="https://www.carryitforward.net/conflict-of-interest">Donate Via Amazon</a>
+            </h6>
+          </div>
+
+          <div class="col-md-2 mb-3">
+            <h6>
+              <a href="https://www.carryitforward.net/volunteer">Volunteer</a>
+            </h6>
+          </div>
+
+          <div class="col-md-2 mb-3">
+            <h6>
+              <a href="mailto: info@carryitforward.net">Email Us</a>
+            </h6>
+          </div>
+
+        </div>
+
+        <hr class="rgba-white-light" style="margin: 0 15%;">
+        <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3 bottom">
+        © 2019 Copyright: <a href="https://www.carryitforward.net"> Carry It Forward.</a> All rights reserved.
+      </div>
+    </footer>
+  </div>
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="../lib/qrcode.min.js"></script>
+  <script src="../main.js"></script>
+</body>
+</html>

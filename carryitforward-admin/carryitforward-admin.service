@@ -1,0 +1,14 @@
+[Unit]
+Description=Utility Server
+
+[Service]
+ExecStart=/home/ubuntu/.nvm/versions/node/v10.15.1/bin/node /home/ubuntu/carryitforward-admin/bin/www
+Restart=always
+User=nobody
+Group=nogroup
+EnvironmentFile=/etc/environment
+Environment=NODE_ENV=production
+WorkingDirectory=/home/ubuntu/carryitforward-admin/
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--This HTML page provides a custom self sign-up page for MCP with token redemption. Viewable here:
+  http://assets.trifoia.com/MCP-bulk-purchases/index.html
+-->
+
+<!-- Metadata and Stylesheets -->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Carry it Forward Administration">
+  <meta name="author" content="Trifoia">
+  
+  <title>Carry it Forward Administration</title>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="/../stylesheets/style.css">
+</head>
+<body>
+  <div class="container-fluid banner text-center">
+    <h1 align="center">Carry it Forward Administration</h1>
+  </div>
+  <!-- Create New Organization -->
+  <form class="form-inline" action="?type=newPerson&access_token=<%- accessToken %>>" method="POST">
+    <input class="form-control" type="name" name="newPersonName" placeholder="First Name" aria-label="First Name" required>
+    <input class="form-control" type="name" name="newPersonName" placeholder="First Name" aria-label="Last Name" required>
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Create New Person</button>
+  </form>
+
+  <!-- List People -->
+  <% for(let i=0; i<people.length; i++) { %>
+    <%-include('./partials/person', {person: people[i], accessToken});%>
+  <% } %>
+
+  <!-- Render the site -->
+  <form class="form-inline" action="?type=render&access_token=<%- accessToken %>>" method="POST">
+    <button class="btn btn-outline-success" type="submit">Render Site with This Data</button>
+  </form>
+
+  <!-- jQuery, Popper.js, and Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

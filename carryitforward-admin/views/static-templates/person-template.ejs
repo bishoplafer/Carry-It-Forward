@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Metadata and Stylesheets -->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Carry It Forward">
+  <meta name="author" content="Kathleen Weisensel">
+  <meta name="x-donation-item-name" content="Carry it forward for <%= person.firstName.S %>">
+
+  <title>Carry it Forward for <%= person.firstName.S %></title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif">
+  <link rel="stylesheet" href="../style.css">
+</head>
+
+<!-- Body  -->
+
+<body>
+  <div class="container-fluid">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-light navbar-expand-md justify-content-center fixed-top">
+      <a href="https://www.carryitforward.net" class="navbar d-flex mr-auto"><img class="img-fluid" width="200" height="200" src="../branding/CIF_Spark.png" alt="Carry It Forward logo"></a>
+
+      <!--Toggler button-->
+      <button class="navbar-toggler ml-1" type="button" data-toggle="collapse" data-target="#navbaritems" data-label-expanded="Close" aria-expanded="false" aria-label="Toggle Navigation">
+        <span class="navbar-toggler-icon"></span>
+        <span class="sr-only">Toggle</span>
+      </button>
+
+      <!-- Site links -->
+      <div class="navbar-collapse collapse justify-content-between align-items-center w-100 position-relative" id="navbaritems">
+        <ul class="navbar-nav mx-auto text-center">
+          <li><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a></li>
+          <li class="nav-item" id="mainNavLink"><a class="nav-link" href="https://www.carritforward.net">Home</a></li>
+          <li class="nav-item" id="mainNavLink"><a class="nav-link" href="https://www.carritforward.net">About</a></li>
+          <li class="nav-item" id="mainNavLink"><a class="nav-link" href="https://www.carritforward.net">Spark</a> </li>
+          <li class="nav-item" id="mainNavLink"><a class="nav-link" href="https://www.carritforward.net">Projects</a></li>
+          <li class="nav-item" id="mainNavLink"><a class="nav-link" href="https://www.carritforward.net">Contact</a></li>
+          <li class="nav-item" id="mainNavLink"><a class="nav-link" href="https://www.carritforward.net">Take Action</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+
+    <div class="header-center row" style="padding-top: 2em;">
+      <h1>Meet <%= person.firstName %>  <%= person.lastName || '' %></h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <img src="../images/<%= person.firstName.S + '-' + person.uuid.S %>" alt="Image of <%= person.firstName.S %>">
+      </div>
+      <div class="col-md-6">
+        <div class="bio-content">
+          <p><%= person.bio.S %></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <form>
+
+      </form>
+    </div>
+
+    <div id="qr-container">
+      <h1>QR Code</h1>
+      <canvas id='qr-canvas'></canvas>
+    </div>
+
+    <!--Footer-->
+    <footer class="page-footer">
+
+      <!-- Footer Links -->
+      <div class="container bottom">
+        <div class="row text-center d-flex justify-content-center pt-5 mb-3">
+
+          <div class="col-md-2 mb-3">
+            <h6>
+              <a id="donate-funds-link" href="https://www.carryitforward.net/terms-of-use">Donate Funds</a>
+            </h6>
+          </div>
+
+          <% if (person.wishlist) { %>
+            <div class="col-md-2 mb-3">
+              <h6>
+                <a href="<%= person.wishlist.S %>">Donate Goods</a>
+              </h6>
+            </div>
+          <% } %>
+
+          <div class="col-md-2 mb-3">
+            <h6>
+              <a href="https://www.carryitforward.net/careers">Volunteer</a>
+            </h6>
+          </div>
+
+          <div class="col-md-2 mb-3">
+            <h6>
+              <a href="mailto: info@carryitforward.net">Email Us</a>
+            </h6>
+          </div>
+
+        </div>
+
+        <hr class="rgba-white-light" style="margin: 0 15%;">
+        <hr class="clearfix d-md-none rgba-white-light" style="margin: 10% 15% 5%;">
+
+      </div>
+
+      <!-- Copyright -->
+      <div class="footer-copyright text-center py-3 bottom">
+        © 2019 Copyright: <a href="https://www.carryitforward.net"> Carry It Forward.</a> All rights reserved.
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="../lib/qrcode.min.js"></script>
+  <script src="../main.js"></script>
+</body>
+</html>
